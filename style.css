@@ -68,41 +68,6 @@ body {
     font-weight: 1000;
     font-style: bold;
     font-family: 'Arial Black', sans-serif;
-   animation: gradientMove 6s linear infinite,
-               headerFloat 3s ease-in-out infinite alternate;
-    display: inline-block;
-    transform-origin: center;
-    will-change: transform, opacity, background-position;
-}
-@keyframes headerFloat {
-    0%   { 
-        transform: translateY(-40px) scale(0.96); 
-        opacity: 0; 
-        filter: blur(6px); 
-        letter-spacing: -4px; 
-    }
-    60%  { 
-        transform: translateY(8px) scale(1.02);
-         opacity: 1; filter: 
-         blur(0); 
-        }
-    100% { 
-        transform: translateY(0) scale(1); 
-        opacity: 1; 
-        filter: blur(0); 
-        letter-spacing: 2px; 
-    }
-}
-@keyframes gradientMove {
-    0%   { 
-        background-position: 0% 50%; 
-    }
-    50%  { 
-        background-position: 100% 50%;
-     }
-    100% { 
-        background-position: 0% 50%;
-     }
 }
 .contact h2 {
     text-align: center;
@@ -111,15 +76,11 @@ body {
     padding: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: bold;
-    background: linear-gradient(90deg, #ff7a00 0%, #1a56d6 50%, #ff6900 100%);
+    background:  #1a56d6;
     background-clip: text;
     color: transparent;
-    animation: contactEntrance 600ms cubic-bezier(.2,.8,.2,1) both,
-               contactPop 3s ease-in-out infinite;
-    will-change: transform, opacity, text-shadow;
 }
-
-.form {
+    .form {
     width: 100%;
     display: flex;
     align-items: center;
@@ -170,18 +131,6 @@ textarea {
     border-radius: 30px;
     width: 200px;
     height: 50px;
-   opacity: 0;
-  transform: translateY(100px);
-  animation: slideUp 1.2s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 .cta {
     height: 300px;
@@ -201,18 +150,7 @@ textarea {
     align-items: start;
     text-align: start;
     margin-left: 100px;
-    opacity: 0;
-  transform: translateX(-250px);
-  animation: slideInLeft 1.2s ease-out forwards;
-  animation-timeline: view();  
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes slideInLeft {
-  to {
-    opacity:1 ;
-    transform: translateX(0);
-  }
+    
 }
 .cta p {
     font-size: 20px;
@@ -237,45 +175,19 @@ textarea {
     align-items: center;
     text-align: center;
     justify-content: center;
-    opacity: 0;
-  transform: rotate(-180deg);
-  animation: rotateIn 1s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
-}
-
-@keyframes rotateIn {
-  to {
-    opacity: 1;
-    transform: rotate(0);
-  }
-
+   
 }
 .locations {
     text-align: center;
     padding: 50px 100px;
 }
 .locations img {
-    width: 700px;
-    height: 430px;
+    width: 800px;
+    height: 500px;
     display: flex;
     align-items: start;
     justify-content: start;
-    margin-left: 180px;
-    padding: 30px;
-    transform: scale(0.5);
-  opacity: 0;
-  animation: zoomIn 1s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
-}
-
-@keyframes zoomIn {
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-
+    margin-left: 200px;
 }
 
 .location-list {
@@ -313,22 +225,6 @@ textarea {
     color: white;
     text-transform: uppercase;
     padding: 20px;
-    opacity: 0;
-  transform: translateX(-250px);
-
-  /* Animation Setup */
-  animation: slideInLeft 1.2s ease-out forwards;
-  animation-timeline: view();  /* triggers on scroll */
-  animation-range: entry 0% cover 40%;
-}
-
-/* --- Keyframes for Slide In --- */
-@keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
 }
 .container-footer .input-field{
     width: 30%;
@@ -357,8 +253,7 @@ textarea {
     border-radius: 25px;
     font-size: 15px;
     color: white;
-    cursor: pointer;
-    transition: all ease-in 0.2s;
+    cursor: pointer;  
 }
 .container-footer .input-field button:active{
    scale: 0.9;
